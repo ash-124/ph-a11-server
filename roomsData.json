@@ -1,0 +1,221 @@
+[
+  {
+    "id": "1",
+    "name": "Deluxe King Room",
+    "price": 120,
+    "description": "Spacious room with a king-sized bed, premium amenities, and a stunning city view.",
+    "size": "350 sq ft",
+    "occupancy": 2,
+    "bedType": "King Bed",
+    "reviews": [
+      {
+        "username": "John Doe",
+        "rating": 5,
+        "comment": "Fantastic stay! The room was very clean and comfortable.",
+        "timestamp": "2025-01-01T10:30:00Z"
+      },
+      {
+        "username": "Jane Smith",
+        "rating": 4,
+        "comment": "Great service, but the room could be quieter.",
+        "timestamp": "2024-12-30T15:45:00Z"
+      }
+    ],
+    "totalReviews": 2,
+    "ratingAverage": 4.5,
+    "image": "https://i.pinimg.com/474x/ba/fe/a1/bafea15cd71a3e9a0b65f14c5ca23fa6.jpg",
+    "amenities": ["WiFi", "Air Conditioning", "Mini Bar", "Room Service"],
+    "availability": true
+  },
+  {
+    "id": "2",
+    "name": "Executive Suite",
+    "price": 250,
+    "description": "Luxury suite with separate living area, work desk, and panoramic views.",
+    "size": "500 sq ft",
+    "occupancy": 3,
+    "bedType": "Queen Bed + Sofa Bed",
+    "reviews": [
+      {
+        "username": "Emily Clark",
+        "rating": 5,
+        "comment": "Excellent for a business trip! Highly recommended.",
+        "timestamp": "2025-01-02T09:20:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 5,
+    "image": "https://i.pinimg.com/474x/e9/4f/e9/e94fe9c2c6f37458708ce735d96fd2ce.jpg",
+    "amenities": ["WiFi", "Work Desk", "Smart TV", "Coffee Maker"],
+    "availability": false
+  },
+  {
+    "id": "3",
+    "name": "Family Room",
+    "price": 180,
+    "description": "Perfect for families, featuring two queen beds and kid-friendly amenities.",
+    "size": "400 sq ft",
+    "occupancy": 4,
+    "bedType": "2 Queen Beds",
+    "reviews": [
+      {
+        "username": "Michael Johnson",
+        "rating": 4,
+        "comment": "Good for families, but parking was limited.",
+        "timestamp": "2024-12-29T11:10:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 4,
+    "image": "https://i.pinimg.com/474x/56/df/45/56df455bef27c3dd2e9dbc1623ec3b32.jpg",
+    "amenities": ["WiFi", "Kids' Play Area", "Crib", "Room Service"],
+    "availability": true
+  },
+  {
+    "id": "4",
+    "name": "Standard Room",
+    "price": 90,
+    "description": "Affordable option with basic amenities and a comfortable queen bed.",
+    "size": "300 sq ft",
+    "occupancy": 2,
+    "bedType": "Queen Bed",
+    "reviews": [],
+    "totalReviews": 0,
+    "ratingAverage": null,
+    "image": "https://i.pinimg.com/474x/2a/cc/29/2acc29ef0b0260bbd4d33271badda6f8.jpg",
+    "amenities": ["WiFi", "Air Conditioning"],
+    "availability": true
+  },
+  {
+    "id": "5",
+    "name": "Luxury Villa",
+    "price": 400,
+    "description": "Exclusive villa with a private pool, garden, and full kitchen.",
+    "size": "1200 sq ft",
+    "occupancy": 6,
+    "bedType": "3 Queen Beds",
+    "reviews": [
+      {
+        "username": "Sarah Lee",
+        "rating": 5,
+        "comment": "Absolutely stunning! Best vacation ever.",
+        "timestamp": "2024-12-28T14:00:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 5,
+    "image": "https://i.pinimg.com/474x/cb/e2/c3/cbe2c33b127497dcb1ca1fc4ecc3d42f.jpg",
+    "amenities": ["Private Pool", "Garden", "Full Kitchen", "WiFi"],
+    "availability": true
+  },
+  {
+    "id": "21",
+    "name": "Coastal Serenity Suite",
+    "price": 120,
+    "description": "A tranquil suite offering ocean views, perfect for a serene retreat.",
+    "size": "400 sq ft",
+    "occupancy": 2,
+    "bedType": "King Bed",
+    "reviews": [
+      {
+        "username": "Alice Cooper",
+        "rating": 5,
+        "comment": "The view was amazing! Would definitely come back.",
+        "timestamp": "2025-01-03T12:00:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 4.6,
+    "image": "https://i.pinimg.com/474x/60/b0/53/60b05373a6fb7af3c341cbd88dddcde8.jpg",
+    "amenities": ["Ocean View", "Private Balcony", "Coffee Maker"],
+    "availability": true
+  },
+  {
+    "id": "22",
+    "name": "Urban Loft Room",
+    "price": 95,
+    "description": "A chic loft-style room in the heart of the city.",
+    "size": "350 sq ft",
+    "occupancy": 2,
+    "bedType": "Queen Bed",
+    "reviews": [
+      {
+        "username": "John Smith",
+        "rating": 4,
+        "comment": "Great location and atmosphere, but a little noisy at night.",
+        "timestamp": "2024-12-15T17:30:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 4.2,
+    "image": "https://i.pinimg.com/474x/21/27/cc/2127cc61d5bf94209801139bbda9c731.jpg",
+    "amenities": ["City View", "Free WiFi", "Mini Bar"],
+    "availability": true
+  },
+  {
+    "id": "23",
+    "name": "Countryside Cottage",
+    "price": 110,
+    "description": "A cozy cottage surrounded by lush greenery.",
+    "size": "400 sq ft",
+    "occupancy": 2,
+    "bedType": "Queen Bed",
+    "reviews": [
+      {
+        "username": "Sarah Johnson",
+        "rating": 5,
+        "comment": "The perfect getaway, loved the peaceful surroundings.",
+        "timestamp": "2024-11-25T09:30:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 4.8,
+    "image": "https://i.pinimg.com/474x/53/a9/37/53a937cdf862da224a40f7c2cab72f75.jpg",
+    "amenities": ["Garden View", "Fireplace", "Pet Friendly"],
+    "availability": true
+  },
+  {
+    "id": "24",
+    "name": "Executive Business Suite",
+    "price": 140,
+    "description": "Designed for business travelers with modern amenities.",
+    "size": "500 sq ft",
+    "occupancy": 3,
+    "bedType": "Queen Bed",
+    "reviews": [
+      {
+        "username": "Rachel Adams",
+        "rating": 5,
+        "comment": "Perfect for my business needs, highly functional and spacious.",
+        "timestamp": "2024-12-20T08:00:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 4.7,
+    "image": "https://i.pinimg.com/474x/db/56/46/db5646f3e0dc56de39bc46312f605863.jpg",
+    "amenities": ["Work Desk", "Meeting Room Access", "High-Speed Internet"],
+    "availability": true
+  },
+  {
+    "id": "25",
+    "name": "Family Deluxe Room",
+    "price": 130,
+    "description": "A spacious room for families with kids-friendly facilities.",
+    "size": "500 sq ft",
+    "occupancy": 4,
+    "bedType": "2 Queen Beds",
+    "reviews": [
+      {
+        "username": "Emma Brown",
+        "rating": 5,
+        "comment": "Our family had a fantastic time here, very accommodating.",
+        "timestamp": "2024-12-10T11:00:00Z"
+      }
+    ],
+    "totalReviews": 1,
+    "ratingAverage": 4.5,
+    "image": "https://i.pinimg.com/474x/5c/e0/d0/5ce0d03a17cdbe309d86b450497c4ba5.jpg",
+    "amenities": ["Play Area", "Kids Meals", "Crib Available"],
+    "availability": true
+  }
+]
