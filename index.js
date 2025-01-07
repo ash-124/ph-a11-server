@@ -9,9 +9,11 @@ const fs = require('fs');
 const port = process.env.PORT || 7500;
 const app = express();
 const corsOptions = {
-  origin: ['http://localhost:5173','https://visa-navigator-fab2f.web.app'],
+  origin: ['http://localhost:5173', 'https://visa-navigator-fab2f.web.app'],
   credentials: true,
-  optionalSuccessStatus: 200,
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'], 
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionalSuccessStatus: 200, 
 }
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -148,20 +150,20 @@ async function run() {
       const result = await usersBookedRooms.deleteOne(filter);
       res.send(result);
     })
-    app.patch('/booked-room/:id', async(req, res) =>{
+    app.patch('/booked-room/update/:id', async(req, res) =>{
       const id = req.params.id;
-      const data = req.body;
+      const data = req.body.bookingDate;
       console.log({data, id})
-      // const filter = { _id: new ObjectId(id) }
-      // const updateDoc = {
-      //   $set: {
-      //     bookingDate: true,
-      //   }
-      // }
-      // const updateResult = await usersBookedRooms.updateOne(query, updateDoc)
-      // console.log(updateResult);
+      const filter = { _id: new ObjectId(id) }
+      const updateDoc = {
+        $set: {
+          bookingDate: data,
+        }
+      }
+      const updateResult = await usersBookedRooms.updateOne(filter, updateDoc)
+      console.log(updateResult);
       
-      // res.send(updateResult);
+      res.send(updateResult);
     })
 
 
