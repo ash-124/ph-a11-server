@@ -126,9 +126,9 @@ async function run() {
       res.send(result);
       console.log(updateResult)
     })
-    app.get('/booking/:email', async(req, res)=>{
-      const user = req.params.email;
-      const bookedUser = {bookedUser : user}
+    app.get('/booking', async(req, res)=>{
+      const user = req.query.email;
+      let bookedUser = {bookedUser : user}
       const result = await usersBookedRooms.find(bookedUser).toArray();
       res.send(result);
       
