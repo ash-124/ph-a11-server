@@ -1,0 +1,55 @@
+[debug] [2025-01-07T06:09:30.059Z] ----------------------------------------------------------------------
+[debug] [2025-01-07T06:09:30.066Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-01-07T06:09:30.067Z] CLI Version:   13.28.0
+[debug] [2025-01-07T06:09:30.068Z] Platform:      win32
+[debug] [2025-01-07T06:09:30.068Z] Node Version:  v20.15.0
+[debug] [2025-01-07T06:09:30.068Z] Time:          Tue Jan 07 2025 12:09:30 GMT+0600 (Bangladesh Standard Time)
+[debug] [2025-01-07T06:09:30.069Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-07T06:09:30.085Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-07T06:09:30.086Z] > authorizing via signed-in user (asrafaly37@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\project hero\ph-A11-Modern-Hotel\modern-hotel-booking-server
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-01-07T06:09:54.431Z] Checked if tokens are valid: false, expires at: 1733900019688
+[debug] [2025-01-07T06:09:54.432Z] Checked if tokens are valid: false, expires at: 1733900019688
+[debug] [2025-01-07T06:09:54.432Z] > refreshing access token with scopes: []
+[debug] [2025-01-07T06:09:54.437Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-01-07T06:09:54.437Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-07T06:09:55.162Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-01-07T06:09:55.163Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-01-07T06:09:55.189Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-01-07T06:09:56.151Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-01-07T06:09:56.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project visa-navigator-fab2f (visa-navigator) 
+[info] 
+=== Hosting Setup
+[debug] [2025-01-07T06:10:03.911Z] Checked if tokens are valid: true, expires at: 1736233794163
+[debug] [2025-01-07T06:10:03.911Z] Checked if tokens are valid: true, expires at: 1736233794163
+[debug] [2025-01-07T06:10:03.912Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/visa-navigator-fab2f [none]
+[debug] [2025-01-07T06:10:04.551Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/visa-navigator-fab2f 200
+[debug] [2025-01-07T06:10:04.552Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/visa-navigator-fab2f {"projectId":"visa-navigator-fab2f","projectNumber":"28161978061","displayName":"visa-navigator","name":"projects/visa-navigator-fab2f","resources":{"hostingSite":"visa-navigator-fab2f"},"state":"ACTIVE","etag":"1_642c16b8-4196-4147-b9ed-5370986cf10c"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

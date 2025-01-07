@@ -1,15 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const cookieParser = require('cookie-parser');
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const fs = require('fs');
-require("dotenv").config();
 // console.log(jsonData)
 const port = process.env.PORT || 7500;
 const app = express();
 const corsOptions = {
-  origin: ['http://localhost:5173'],
+  origin: ['http://localhost:5173','https://visa-navigator-fab2f.web.app'],
   credentials: true,
   optionalSuccessStatus: 200,
 }
@@ -47,7 +47,7 @@ async function run() {
     const roomsCollection = database.collection("rooms");
     const usersBookedRooms = database.collection('booked-rooms')
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
@@ -114,7 +114,7 @@ async function run() {
 
     })
     app.post('/booked-rooms', async (req, res) => {
-      const data = req.body; 
+      const data = req.body;
       const query = { id: data.roomId };
       const updateDoc = {
         $set: {
@@ -124,14 +124,44 @@ async function run() {
       const updateResult = await roomsCollection.updateOne(query, updateDoc)
       const result = await usersBookedRooms.insertOne(data);
       res.send(result);
-      console.log(updateResult)
+
     })
-    app.get('/booking', async(req, res)=>{
+    app.get('/booking', async (req, res) => {
       const user = req.query.email;
-      let bookedUser = {bookedUser : user}
+      let bookedUser = { bookedUser: user }
+
       const result = await usersBookedRooms.find(bookedUser).toArray();
       res.send(result);
+    })
+    app.delete('/booking/:roomId', async (req, res) => {
+      const id = req.query.id;
+      const roomId = req.params.roomId;
+      const filter = { _id: new ObjectId(id) }
+      const query = { id: roomId };
+      const updateDoc = {
+        $set: {
+          availability: true,
+        }
+      }
+      const updateResult = await roomsCollection.updateOne(query, updateDoc)
+      console.log(updateResult);
+      const result = await usersBookedRooms.deleteOne(filter);
+      res.send(result);
+    })
+    app.patch('/booked-room/:id', async(req, res) =>{
+      const id = req.params.id;
+      const data = req.body;
+      console.log({data, id})
+      // const filter = { _id: new ObjectId(id) }
+      // const updateDoc = {
+      //   $set: {
+      //     bookingDate: true,
+      //   }
+      // }
+      // const updateResult = await usersBookedRooms.updateOne(query, updateDoc)
+      // console.log(updateResult);
       
+      // res.send(updateResult);
     })
 
 
@@ -142,7 +172,7 @@ async function run() {
 }
 run().catch(console.dir);
 app.get("/", (req, res) => {
-  res.send("Hello from SoloSphere Server....");
+  res.send("Hello from Modern Hotel booking Server....");
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`))
