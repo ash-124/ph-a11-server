@@ -105,29 +105,34 @@ async function run() {
         const result = await data.toArray();
         res.send(result);
       }
-      app.get("/rooms/:id", async (req, res) => {
-        const id = req.params.id;
-        const query = { id: id };
-        const result = await roomsCollection.findOne(query);
-        res.send(result);
-
-      })
-      app.post('/booked-rooms', async (req, res) => {
-        const data = req.body;
-        const query = { id: data.roomId };
-        const updateDoc = {
-          $set: {
-            availability: false,
-          }
-        }
-        const updateResult = await roomsCollection.updateOne(query, updateDoc)
-        const result = await usersBookedRooms.insertOne(data);
-        res.send(result);
-        console.log(updateResult)
-      })
-
-
     });
+    app.get("/rooms/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { id: id };
+      const result = await roomsCollection.findOne(query);
+      res.send(result);
+
+    })
+    app.post('/booked-rooms', async (req, res) => {
+      const data = req.body; 
+      const query = { id: data.roomId };
+      const updateDoc = {
+        $set: {
+          availability: false,
+        }
+      }
+      const updateResult = await roomsCollection.updateOne(query, updateDoc)
+      const result = await usersBookedRooms.insertOne(data);
+      res.send(result);
+      console.log(updateResult)
+    })
+    app.get('/booking/:email', async(req, res)=>{
+      const user = req.params.email;
+      const bookedUser = {bookedUser : user}
+      const result = await usersBookedRooms.find(bookedUser).toArray();
+      res.send(result);
+      
+    })
 
 
 
