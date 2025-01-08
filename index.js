@@ -11,9 +11,9 @@ const app = express();
 const corsOptions = {
   origin: ['http://localhost:5173', 'https://visa-navigator-fab2f.web.app'],
   credentials: true,
-  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'], 
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'PUT'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  optionalSuccessStatus: 200, 
+  optionalSuccessStatus: 200,
 }
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -59,6 +59,7 @@ async function run() {
       const token = jwt.sign(email, process.env.SECRET_KEY, {
         expiresIn: "365d",
       });
+      console.log(token);
       res.cookie('token', token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
@@ -150,10 +151,10 @@ async function run() {
       const result = await usersBookedRooms.deleteOne(filter);
       res.send(result);
     })
-    app.patch('/booked-room/update/:id', async(req, res) =>{
+    app.patch('/booked-room/update/:id', async (req, res) => {
       const id = req.params.id;
       const data = req.body.bookingDate;
-      console.log({data, id})
+      console.log({ data, id })
       const filter = { _id: new ObjectId(id) }
       const updateDoc = {
         $set: {
@@ -162,8 +163,12 @@ async function run() {
       }
       const updateResult = await usersBookedRooms.updateOne(filter, updateDoc)
       console.log(updateResult);
-      
+
       res.send(updateResult);
+    })
+    app.post('/reviews', async (req, res) => {
+      const data = req.body;
+      console.log(data);
     })
 
 
